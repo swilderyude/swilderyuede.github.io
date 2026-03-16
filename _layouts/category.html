@@ -14,7 +14,7 @@ layout: default
         {{ post.date | date: '%Y年%m月%d日' }} | 
         <a href="/categories/{{ post.categories[0] }}/">{{ post.categories[0] }}</a>
       </div>
-      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
     </article>
     {% endif %}
   {% endfor %}
