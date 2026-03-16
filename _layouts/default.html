@@ -19,8 +19,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           {% for item in site.menu %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{{ item.url }}" role="button" data-bs-toggle="dropdown">
+              {{ item.title }}
+            </a>
+            {% if item.subcategories %}
+            <ul class="dropdown-menu">
+              {% for sub in item.subcategories %}
+              <li>
+                <a class="dropdown-item" href="{{ sub.url }}">{{ sub.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
