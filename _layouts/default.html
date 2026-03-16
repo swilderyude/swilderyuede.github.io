@@ -54,7 +54,7 @@
             <ul class="list-unstyled">
               {% for category in site.categories %}
               <li>
-                <a href="{{ category.url }}">{{ category.name }}</a>
+                <a href="/categories/{{ category[0] }}/">{{ category[0] }}</a>
               </li>
               {% endfor %}
             </ul>
@@ -65,7 +65,7 @@
             <h5 class="card-title">标签</h5>
             <div class="tags">
               {% for tag in site.tags %}
-              <a href="{{ tag.url }}" class="badge bg-secondary me-1 mb-1">{{ tag.name }}</a>
+              <a href="/tags/{{ tag[0] }}/" class="badge bg-secondary me-1 mb-1">{{ tag[0] }}</a>
               {% endfor %}
             </div>
           </div>
