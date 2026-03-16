@@ -4,6 +4,9 @@ description: 计算机研究生的技术学习与科研记录
 baseurl: ""
 url: "https://swilderyuede.github.io"
 
+# 主题设置
+theme: null
+
 # 作者信息
 author:
   name: Swilderyu
