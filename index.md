@@ -20,7 +20,8 @@ title: Swilderyu 的个人博客
     <div class="meta">
       {{ post.date | date: '%Y年%m月%d日' }} | 
       {% if post.categories and post.categories.size > 0 %}
-        <a href="/categories/{{ post.categories[0] }}/">{{ post.categories[0] }}</a>
+        {% assign cat = post.categories | first %}
+        <a href="/categories/{{ cat }}/">{{ cat }}</a>
       {% else %}
         未分类
       {% endif %}
