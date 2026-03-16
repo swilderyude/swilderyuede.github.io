@@ -11,7 +11,7 @@ author:
   bio: 计算机科学与技术专业研究生，专注于人工智能、算法与系统设计
 
 # 博客设置
-markdown: null
+markdown: commonmark
 highlighter: null
 permalink: /:year/:month/:day/:title/
 
