@@ -1,0 +1,49 @@
+# 博客配置
+name: Swilderyu 个人博客
+description: 计算机研究生的技术学习与科研记录
+baseurl: ""
+url: "https://swilderyu.github.io"
+
+# 作者信息
+author:
+  name: Swilderyu
+  email: swilderyu@example.com
+  bio: 计算机科学与技术专业研究生，专注于人工智能、算法与系统设计
+
+# 博客设置
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# 分类与标签
+collections:
+  categories:
+    output: true
+    permalink: /categories/:name/
+  tags:
+    output: true
+    permalink: /tags/:name/
+
+# 导航菜单
+menu:
+  - title: 首页
+    url: /
+  - title: 科研
+    url: /categories/research/
+  - title: 项目
+    url: /categories/project/
+  - title: 技术栈
+    url: /categories/tech-stack/
+  - title: 算法
+    url: /categories/algorithm/
+  - title: 八股
+    url: /categories/interview/
+  - title: 基础
+    url: /categories/foundation/
+  - title: 随笔
+    url: /categories/essay/
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
