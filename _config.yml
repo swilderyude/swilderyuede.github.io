@@ -12,13 +12,12 @@ author:
 
 # 博客设置
 markdown: kramdown
-highlighter: rouge
+highlighter: null
 permalink: /:year/:month/:day/:title/
 
 # Kramdown 配置
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
   hard_wrap: false
 
 # 分类与标签
