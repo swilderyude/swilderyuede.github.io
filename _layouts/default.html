@@ -31,45 +31,47 @@
   <!-- 主内容区 -->
   <main class="container mt-5">
     <div class="row">
-      <!-- 文章列表 -->
-      <div class="col-md-8">
-        {{ content }}
+      <!-- 侧边栏/目录 -->
+      <div class="col-md-3">
+        <div class="sticky-top" style="top: 2rem;">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">关于我</h5>
+              <p class="card-text">{{ site.author.bio }}</p>
+              <div class="social-links">
+                <a href="https://github.com/swilderyu" class="text-dark me-3">GitHub</a>
+                <a href="https://www.cnblogs.com/swilderyu" class="text-dark me-3">博客园</a>
+                <a href="mailto:{{ site.author.email }}" class="text-dark">邮箱</a>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">分类</h5>
+              <ul class="list-unstyled">
+                {% for category in site.categories %}
+                <li>
+                  <a href="/categories/{{ category[0] }}/">{{ category[0] }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">标签</h5>
+              <div class="tags">
+                {% for tag in site.tags %}
+                <a href="/tags/{{ tag[0] }}/" class="badge bg-secondary me-1 mb-1">{{ tag[0] }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- 侧边栏 -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">关于我</h5>
-            <p class="card-text">{{ site.author.bio }}</p>
-            <div class="social-links">
-              <a href="https://github.com/swilderyu" class="text-dark me-3">GitHub</a>
-              <a href="https://www.cnblogs.com/swilderyu" class="text-dark me-3">博客园</a>
-              <a href="mailto:{{ site.author.email }}" class="text-dark">邮箱</a>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">分类</h5>
-            <ul class="list-unstyled">
-              {% for category in site.categories %}
-              <li>
-                <a href="/categories/{{ category[0] }}/">{{ category[0] }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">标签</h5>
-            <div class="tags">
-              {% for tag in site.tags %}
-              <a href="/tags/{{ tag[0] }}/" class="badge bg-secondary me-1 mb-1">{{ tag[0] }}</a>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
+      <!-- 文章列表 -->
+      <div class="col-md-9">
+        {{ content }}
       </div>
     </div>
   </main>
