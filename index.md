@@ -3,7 +3,7 @@ layout: default
 title: Swilderyu 的个人博客
 ---
 
-<div class="jumbotron bg-light rounded-lg p-5 mb-5">
+<div class="jumbotron bg-light rounded-lg p-5 mb-5" style="background-image: url('/assets/images/cover.jpg'); background-size: cover; background-position: center; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
   <h1 class="display-4">欢迎来到 Swilderyu 的个人博客</h1>
   <p class="lead">记录计算机研究生的学习、科研与项目实践</p>
   <hr class="my-4">
