@@ -18,22 +18,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          {% for item in site.menu %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{{ item.url }}" role="button" data-bs-toggle="dropdown">
-              {{ item.title }}
-            </a>
-            {% if item.subcategories %}
-            <ul class="dropdown-menu">
-              {% for sub in item.subcategories %}
-              <li>
-                <a class="dropdown-item" href="{{ sub.url }}">{{ sub.title }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </li>
-          {% endfor %}
+          <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="/categories/科研/">科研</a></li>
+          <li class="nav-item"><a class="nav-link" href="/categories/项目/">项目</a></li>
+          <li class="nav-item"><a class="nav-link" href="/categories/技术栈/">技术栈</a></li>
+          <li class="nav-item"><a class="nav-link" href="/categories/算法/">算法</a></li>
+          <li class="nav-item"><a class="nav-link" href="/categories/八股/">八股</a></li>
+          <li class="nav-item"><a class="nav-link" href="/categories/基础/">基础</a></li>
+          <li class="nav-item"><a class="nav-link" href="/categories/随笔/">随笔</a></li>
         </ul>
       </div>
     </div>
@@ -51,7 +43,6 @@
               <p class="card-text">{{ site.author.bio }}</p>
               <div class="social-links">
                 <a href="https://github.com/swilderyu" class="text-dark me-3">GitHub</a>
-                <a href="https://www.cnblogs.com/swilderyu" class="text-dark me-3">博客园</a>
                 <a href="mailto:{{ site.author.email }}" class="text-dark">邮箱</a>
               </div>
             </div>
