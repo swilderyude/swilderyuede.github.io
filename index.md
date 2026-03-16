@@ -19,9 +19,13 @@ title: Swilderyu 的个人博客
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <div class="meta">
       {{ post.date | date: '%Y年%m月%d日' }} | 
-      <a href="/categories/{{ post.categories[0] }}/">{{ post.categories[0] }}</a>
+      {% if post.categories and post.categories.size > 0 %}
+        <a href="/categories/{{ post.categories[0] }}/">{{ post.categories[0] }}</a>
+      {% else %}
+        未分类
+      {% endif %}
     </div>
-    <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
   </article>
   {% endfor %}
 </div>
