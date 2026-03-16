@@ -72,4 +72,3 @@ menu:
 # 插件
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
