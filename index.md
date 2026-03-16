@@ -9,7 +9,6 @@ title: Swilderyu 的个人博客
   <hr class="my-4">
   <p>这里分享关于人工智能、算法设计、系统开发等领域的技术笔记、科研思考和项目经验，希望能与大家共同学习进步。</p>
   <a class="btn btn-primary btn-lg" href="/categories/research/" role="button">查看科研内容</a>
-  <div class="poem">独有南山桂花发，飞来飞去袭人裾</div>
 </div>
 
 <h2>最近文章</h2>
